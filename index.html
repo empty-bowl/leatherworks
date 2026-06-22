@@ -5,59 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Leatherworks Storefront</title>
     <style>
-<style>
-    :root { 
-        --brown: #5D4037; 
-        /* A deeper, more muted "felt" green */
-        --felt-green: #4A6741; 
-        --bg-color: #DDE5D9; 
-    }
-    
-    body { 
-        background-color: var(--bg-color); 
-        font-family: 'Segoe UI', sans-serif; 
-        margin: 0; 
-        padding: 40px; 
-    }
-    
-    .module { 
-        /* Frame styling */
-        border: 3px solid var(--brown); 
-        background: white; 
-        padding: 30px; 
-        margin: 15px auto; 
-        max-width: 600px; 
-        border-radius: 4px; 
-        color: var(--brown);
-        /* Digital frame depth effect */
-        box-shadow: 8px 8px 0px rgba(93, 64, 55, 0.2);
-    }
-    
-    h1 { 
-        text-align: center; 
-        text-transform: uppercase; 
-        letter-spacing: 2px;
-    }
-</style>
-        .product-grid { display: flex; gap: 20px; justify-content: center; margin-top: 20px; }
-.product-card { border: 2px solid var(--brown); padding: 15px; border-radius: 8px; width: 200px; text-align: center; background: white; }
+        :root { 
+            --brown: #5D4037; 
+            --bg-felt: #C8E6C9; /* Reference image background color */
+        }
+        body { 
+            background-color: var(--bg-felt); 
+            font-family: 'Helvetica', sans-serif; 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px; 
+            margin: 0;
+        }
+        .container { 
+            width: 100%; 
+            max-width: 800px; 
+            display: grid; 
+            gap: 20px; 
+        }
+        .box { 
+            border: 2px solid var(--brown); 
+            background: white; 
+            padding: 20px; 
+        }
+        .nav { text-align: center; font-weight: bold; }
+        .hero { display: flex; gap: 20px; }
+        .hero-img { width: 40%; background: #eee; border: 1px solid #ccc; }
+        .hero-text { width: 60%; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+        h1 { margin-top: 0; color: var(--brown); }
     </style>
 </head>
-<!-- Product Grid -->
-<div class="product-grid">
-    <div class="product-card">
-        <h3>Leather Wallet</h3>
-        <p>$45.00</p>
-    </div>
-    <div class="product-card">
-        <h3>Leather Belt</h3>
-        <p>$65.00</p>
-    </div>
-</div>
 <body>
-    <div class="module">
-        <h1>Leatherworks</h1>
-        <p>Handcrafted, vegetable-tanned leather goods.</p>
+    <div class="container">
+        <!-- Navigation -->
+        <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
+        
+        <!-- Hero Section -->
+        <div class="hero box">
+            <div class="hero-img"></div>
+            <div class="hero-text">
+                <h1>LEATHERWORKS</h1>
+                <p>HANDCRAFTED | VEG-TANNED | TIMELESS DESIGN</p>
+                <p>SMALL ACCESSORIES. SMALL BATCH.</p>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid-3">
+            <div class="box"><h3>OUR PROCESS</h3></div>
+            <div class="box"><h3>FEATURED WALLET</h3></div>
+            <div class="box"><h3>FEATURED BELT</h3></div>
+        </div>
+
+        <!-- Footer -->
+        <div class="box">
+            <h2>START YOUR COLLECTION</h2>
+            <button>SHOP NOW</button>
+        </div>
     </div>
 </body>
 </html>
