@@ -2,69 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leatherworks Storefront</title>
     <style>
         :root { 
             --brown: #5D4037; 
-            --bg-felt: #C8E6C9; /* Reference image background color */
+            /* Deeper "pool table" felt green */
+            --felt-green: #3E6349; 
         }
         body { 
-            background-color: var(--bg-felt); 
-            font-family: 'Helvetica', sans-serif; 
-            display: flex; 
-            justify-content: center; 
+            background-color: var(--felt-green); 
+            font-family: monospace; /* Digital/condensed feel */
             padding: 40px; 
-            margin: 0;
+            display: flex; 
+            justify-content: center;
         }
         .container { 
             width: 100%; 
-            max-width: 800px; 
+            max-width: 700px; 
             display: grid; 
-            gap: 20px; 
+            gap: 15px; 
         }
+        /* Digital frame effect: sharp borders with slight drop-shadow */
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
-            padding: 20px; 
+            padding: 15px; 
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
         }
-        .nav { text-align: center; font-weight: bold; }
-        .hero { display: flex; gap: 20px; }
-        .hero-img { width: 40%; background: #eee; border: 1px solid #ccc; }
-        .hero-text { width: 60%; }
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
-        h1 { margin-top: 0; color: var(--brown); }
-        .box { 
-    border: 2px solid var(--brown); 
-    background: white; 
-    padding: 20px; 
-    text-align: center; /* Ensures content in boxes is centered */
-}
-
-/* Style the shop button */
-button { 
-    background-color: var(--brown); 
-    color: white; 
-    border: none; 
-    padding: 10px 20px; 
-    cursor: pointer; 
-    font-weight: bold;
-    text-transform: uppercase;
-}
-
-/* Adjust the hero text alignment */
-.hero-text { 
-    width: 60%; 
-    text-align: left; 
-}
+        .nav { font-weight: bold; text-align: center; }
+        .hero { display: flex; gap: 15px; }
+        .hero-img { width: 30%; background: #eee; border: 1px solid #ccc; }
+        .hero-text { width: 70%; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        h1, h2, h3 { margin: 0; color: var(--brown); text-transform: uppercase; }
+        button { 
+            background: var(--brown); 
+            color: white; 
+            border: none; 
+            padding: 8px 16px; 
+            cursor: pointer; 
+            font-weight: bold; 
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Navigation -->
         <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
         
-        <!-- Hero Section -->
         <div class="hero box">
             <div class="hero-img"></div>
             <div class="hero-text">
@@ -74,18 +57,16 @@ button {
             </div>
         </div>
 
-        <!-- Product Grid -->
         <div class="grid-3">
-            <div class="box"><h3>OUR PROCESS</h3></div>
-            <div class="box"><h3>FEATURED WALLET</h3></div>
-            <div class="box"><h3>FEATURED BELT</h3></div>
+            <div class="box"><h3>PROCESS</h3></div>
+            <div class="box"><h3>WALLET</h3></div>
+            <div class="box"><h3>BELT</h3></div>
         </div>
 
-        <!-- Footer -->
-        <div class="box">
+        <div class="box" style="text-align: center;">
             <h2>START YOUR COLLECTION</h2>
             <button>SHOP NOW</button>
         </div>
     </div>
 </body>
-</html>/
+</html>
