@@ -2,47 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leatherworks Storefront</title>
     <style>
         :root { 
             --brown: #5D4037; 
-            /* Deeper "pool table" felt green */
             --felt-green: #3E6349; 
         }
-        body {
-          /* Deep pool table green base color */
-          background-color: #3E6349;
-    
-           /* Overlaying a noise pattern to simulate felt fibers */
-           background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%), 
-                      repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 1px, transparent 2px);
-           background-size: 100% 100%, 4px 4px;
-}
+        
+        body { 
+            /* Felt background with texture pattern */
+            background-color: var(--felt-green);
+            background-image: 
+                radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(0,0,0,0.2) 100%), 
+                repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.05) 1px, transparent 2px);
+            background-size: 100% 100%, 4px 4px;
+            background-blend-mode: multiply;
+            
+            font-family: 'Courier New', monospace; 
+            display: flex; 
+            justify-content: center; 
+            padding: 40px; 
+            margin: 0;
+            min-height: 100vh;
+        }
+
         .container { 
             width: 100%; 
             max-width: 700px; 
             display: grid; 
             gap: 15px; 
         }
-        /* Digital frame effect: sharp borders with slight drop-shadow */
+
+        /* Digital Frame Styling */
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
             padding: 15px; 
             box-shadow: 4px 4px 0px rgba(0,0,0,0.2);
+            text-align: center;
         }
-        .nav { font-weight: bold; text-align: center; }
-        .hero { display: flex; gap: 15px; }
+
+        .nav { font-weight: bold; }
+        .hero { display: flex; gap: 15px; text-align: left; }
         .hero-img { width: 30%; background: #eee; border: 1px solid #ccc; }
         .hero-text { width: 70%; }
+        
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; }
+        
         h1, h2, h3 { margin: 0; color: var(--brown); text-transform: uppercase; }
+        
         button { 
             background: var(--brown); 
             color: white; 
             border: none; 
             padding: 8px 16px; 
             cursor: pointer; 
-            font-weight: bold; 
+            font-weight: bold;
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -65,7 +82,7 @@
             <div class="box"><h3>BELT</h3></div>
         </div>
 
-        <div class="box" style="text-align: center;">
+        <div class="box">
             <h2>START YOUR COLLECTION</h2>
             <button>SHOP NOW</button>
         </div>
