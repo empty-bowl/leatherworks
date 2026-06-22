@@ -7,83 +7,52 @@
     <style>
         :root { 
             --brown: #5D4037; 
-            --felt-green: #2D4A35; /* Deep, pool-table green */
+            --mint: #C8E6C9;
         }
-        
         body { 
-            /* Clean Paisley Pattern on Felt Green */
-            background-color: var(--felt-green);
-            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 100 100"><path d="M50 0 C30 0, 20 20, 20 40 C20 60, 40 70, 50 80 C60 70, 80 60, 80 40 C80 20, 70 0, 50 0 Z M50 10 C60 10, 70 20, 70 40 C70 55, 60 60, 50 65 C40 60, 30 55, 30 40 C30 20, 40 10, 50 10 Z" fill="white" fill-opacity="0.05"/></svg>');
-            background-size: 60px 60px;
-            
-            font-family: 'Courier New', Courier, monospace; 
-            display: flex; 
-            justify-content: center; 
-            padding: 15px; 
+            background-color: var(--mint); 
+            font-family: sans-serif; 
             margin: 0;
-            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
         }
-
         .container { 
             width: 100%; 
             max-width: 600px; 
             display: grid; 
-            gap: 6px; 
+            gap: 10px; 
         }
-
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
-            padding: 8px; 
-            box-shadow: 3px 3px 0px rgba(0,0,0,0.3);
+            padding: 15px;
             text-align: center;
         }
-
-        .nav { font-weight: bold; font-size: 0.8em; letter-spacing: 1px; }
-        .hero { display: flex; gap: 8px; text-align: left; align-items: center; }
-        .hero-img { width: 20%; background: #eee; border: 1px solid #ccc; aspect-ratio: 1/1; }
-        .hero-text { width: 80%; }
-        
-        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px; }
-        
-        h1 { margin: 0; color: var(--brown); font-size: 1.2em; text-transform: uppercase; }
-        h2, h3 { margin: 0; color: var(--brown); font-size: 0.9em; text-transform: uppercase; }
-        p { margin: 2px 0; font-size: 0.75em; color: #333; }
-        
-        button { 
-            background: var(--brown); 
-            color: white; 
-            border: none; 
-            padding: 4px 10px; 
-            cursor: pointer; 
-            font-weight: bold;
-            font-size: 0.8em;
-            margin-top: 5px;
-            text-transform: uppercase;
-        }
+        .nav { font-weight: bold; }
+        .hero { display: flex; gap: 10px; text-align: left; }
+        .hero-img { width: 30%; background: #eee; border: 1px solid #ccc; }
+        .hero-text { width: 70%; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+        button { background: var(--brown); color: white; border: none; padding: 10px; cursor: pointer; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
-        
         <div class="hero box">
             <div class="hero-img"></div>
             <div class="hero-text">
-                <h1>LEATHERWORKS</h1>
+                <h2>LEATHERWORKS</h2>
                 <p>HANDCRAFTED | VEG-TANNED</p>
-                <p>SMALL ACCESSORIES. SMALL BATCH.</p>
             </div>
         </div>
-
         <div class="grid-3">
-            <div class="box"><h3>PROCESS</h3></div>
-            <div class="box"><h3>WALLET</h3></div>
-            <div class="box"><h3>BELT</h3></div>
+            <div class="box">PROCESS</div>
+            <div class="box">WALLET</div>
+            <div class="box">BELT</div>
         </div>
-
         <div class="box">
-            <h2>START YOUR COLLECTION</h2>
             <button>SHOP NOW</button>
         </div>
     </div>
