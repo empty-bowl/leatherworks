@@ -8,13 +8,15 @@
             /* Deeper "pool table" felt green */
             --felt-green: #3E6349; 
         }
-        body { 
-            background-color: var(--felt-green); 
-            font-family: monospace; /* Digital/condensed feel */
-            padding: 40px; 
-            display: flex; 
-            justify-content: center;
-        }
+        body {
+          /* Deep pool table green base color */
+          background-color: #3E6349;
+    
+           /* Overlaying a noise pattern to simulate felt fibers */
+           background-image: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, rgba(0,0,0,0.1) 100%), 
+                      repeating-radial-gradient(circle at 50% 50%, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.02) 1px, transparent 2px);
+           background-size: 100% 100%, 4px 4px;
+}
         .container { 
             width: 100%; 
             max-width: 700px; 
