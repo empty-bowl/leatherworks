@@ -10,12 +10,12 @@
             --mint: #C8E6C9;
         }
         body { 
-            /* Grid lines using solid linear gradients for reliability */
+            /* Grid with dashed effect on mint green */
             background-color: var(--mint);
             background-image: 
-                linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
-            background-size: 40px 40px;
+                repeating-linear-gradient(to right, transparent 0, transparent 4px, rgba(93, 64, 55, 0.2) 4px, rgba(93, 64, 55, 0.2) 6px, transparent 6px, transparent 10px), 
+                repeating-linear-gradient(to bottom, transparent 0, transparent 4px, rgba(93, 64, 55, 0.2) 4px, rgba(93, 64, 55, 0.2) 6px, transparent 6px, transparent 10px);
+            background-size: 20px 20px;
             
             font-family: sans-serif; 
             margin: 0;
