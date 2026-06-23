@@ -10,7 +10,8 @@
             --mint: #C8E6C9;
         }
         body { 
-            /* Multi-layer background to create the specific dashed graph paper effect */
+            /* Fixed: Added min-height to ensure background covers the whole page */
+            min-height: 100vh;
             background-color: var(--mint);
             background-image: 
                 repeating-linear-gradient(to right, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
