@@ -5,85 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James Looney's Leatherworks</title>
     <style>
-        :root { 
-            --brown: #5D4037; 
-            --mint: #C8E6C9;
-        }
+        :root { --brown: #5D4037; --mint: #C8E6C9; }
         body { 
             background-color: var(--mint);
-            background-image: 
-                repeating-linear-gradient(to right, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
-                repeating-linear-gradient(to bottom, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
-                linear-gradient(to bottom, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px), 
-                linear-gradient(to right, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px);
+            background-image: repeating-linear-gradient(to right, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
+                              repeating-linear-gradient(to bottom, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
+                              linear-gradient(to bottom, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px), 
+                              linear-gradient(to right, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px);
             background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px;
-            font-family: sans-serif;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 40px 20px;
+            font-family: sans-serif; margin: 0; display: flex; justify-content: center; padding: 40px 20px;
         }
         .container { width: 100%; max-width: 400px; display: flex; flex-direction: column; gap: 15px; }
-
-        .header-slant {
-            background-color: var(--brown);
-            color: white;
-            padding: 8px 20px;
-            font-weight: bold;
-            text-transform: uppercase;
-            width: 50%; 
-            clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
-            margin-bottom: -8px;
-            font-size: 0.9em;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header-slant::after {
-            content: "";
-            position: absolute;
-            right: 25%;
-            top: 25%;
-            height: 50%;
-            width: 2px;
-            background: white;
-            box-shadow: 6px 0 0 white;
-        }
-
         .box { border: 2px solid var(--brown); background: white; padding: 20px; text-align: center; }
+        .header-slant { background-color: var(--brown); color: white; padding: 8px 15px; font-weight: bold; text-transform: uppercase; width: 50%; clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%); margin-bottom: -15px; font-size: 0.8em; position: relative; z-index: 1; }
+        .header-slant::after { content: ""; position: absolute; right: 25%; top: 25%; height: 50%; width: 2px; background: white; box-shadow: 6px 0 0 white; }
         .nav { font-weight: bold; font-size: 0.9em; }
-        .hero { display: flex; flex-direction: column; gap: 15px; }
-        .hero-img { width: 100px; height: 100px; background: #eee; border: 1px solid #ccc; margin: 0 auto; }
-        .hero-text h2 { margin: 10px 0; font-size: 1.3em; }
-        .hero-text p { font-size: 0.8em; margin: 0; line-height: 1.4; }
-        
+        .hero { display: flex; flex-direction: column; gap: 10px; }
+        .hero-text h2 { margin: 5px 0; font-size: 1.2em; }
+        .process-text { text-align: left; font-size: 0.85em; line-height: 1.5; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-        .grid-box { padding: 15px 5px; font-weight: bold; font-size: 0.9em; }
-        
-        button { 
-            background: var(--brown); color: white; border: none; padding: 15px; 
-            cursor: pointer; text-transform: uppercase; font-weight: bold; width: 100%;
-        }
+        button { background: var(--brown); color: white; border: none; padding: 15px; cursor: pointer; text-transform: uppercase; font-weight: bold; width: 100%; }
+        .stripe-msg { font-size: 0.75em; color: var(--brown); font-style: italic; margin-top: 10px; }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="header-slant">James Looney's Leatherworks</div>
-        <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
+        <div class="box nav">
+            OUR CRAFT | GALLERY | SHOP | <a href="mailto:jl.leatherworks@protonmail.com" style="color: var(--brown);">CONTACT</a>
+        </div>
+        
         <div class="hero box">
-            <div class="hero-img"></div>
-            <div class="hero-text">
-                <h2>LEATHERWORKS</h2>
-                <p>HANDCRAFTED | VEG-TANNED | RESTORATION | SMALL GOODS | COMMISSIONS</p>
+            <h2>LEATHERWORKS</h2>
+            <div class="process-text">
+                <p><strong>Our Artisan Commitment:</strong> Every project undergoes a rigorous 25-step sequence. By relying exclusively on manual tools—the hammer and the chisel—we ensure total control over every stitch and fold. This process mandates constant fitment checks and meticulous cleaning at every stage, ensuring no detail is overlooked before the final product reaches your hands.</p>
             </div>
         </div>
+        
         <div class="grid-3">
-            <div class="box grid-box">PROCESS</div>
-            <div class="box grid-box">WALLET</div>
-            <div class="box grid-box">BELT</div>
+            <div class="box" style="padding: 10px 5px; font-size: 0.8em;">PROCESS (Complete)</div>
+            <div class="box" style="padding: 10px 5px; font-size: 0.8em;">WALLET (Showcase)</div>
+            <div class="box" style="padding: 10px 5px; font-size: 0.8em;">BELT (Showcase)</div>
         </div>
+        
         <div class="box">
-            <button>SHOP NOW</button>
+            <a href="mailto:jl.leatherworks@protonmail.com" style="text-decoration: none;">
+                <button>INQUIRE FOR PURCHASE</button>
+            </a>
+            <p class="stripe-msg">Non-Cash Payments hosted on this page are on their way!</p>
+        </div>
+
+        <!-- Footer for API/Customer visibility -->
+        <div class="box" style="font-size: 0.7em; color: #5D4037; border: 1px solid #C8E6C9; padding: 10px;">
+            James Looney's Leatherworks | Greenfield, Ohio | <a href="mailto:jl.leatherworks@protonmail.com" style="color: #5D4037;">jl.leatherworks@protonmail.com</a>
         </div>
     </div>
 </body>
