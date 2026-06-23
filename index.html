@@ -15,46 +15,46 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            padding: 20px;
+            padding: 40px 20px; /* Increased vertical padding */
         }
         .container { 
             width: 100%; 
-            max-width: 450px; /* Narrower width for longer look */
+            max-width: 400px; /* Narrower width for elongated shape */
             display: grid; 
-            gap: 10px; 
+            gap: 15px; /* Increased spacing for length */
         }
 
-        /* Header set to approx 1/4 the width of the container */
+        /* Header set to 50% width */
         .header-slant {
             background-color: var(--brown);
             color: white;
-            padding: 8px 15px;
+            padding: 15px 20px;
             font-weight: bold;
             text-transform: uppercase;
-            width: 25%; /* 1/4 width */
+            width: 50%; 
             clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
-            margin-bottom: -5px;
-            font-size: 0.8em;
+            margin-bottom: -10px;
+            font-size: 0.9em;
         }
 
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
-            padding: 15px;
+            padding: 25px 20px; /* Increased padding for length */
             text-align: center;
         }
         
         .nav { font-weight: bold; font-size: 0.9em; }
-        .hero { display: flex; gap: 10px; text-align: left; }
-        .hero-img { width: 30%; background: #eee; border: 1px solid #ccc; }
-        .hero-text { width: 70%; font-size: 0.8em; }
+        .hero { display: flex; flex-direction: column; gap: 15px; text-align: center; } /* Stacked for length */
+        .hero-img { width: 100px; height: 100px; background: #eee; border: 1px solid #ccc; margin: 0 auto; }
+        .hero-text { font-size: 0.9em; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
         
         button { 
             background: var(--brown); 
             color: white; 
             border: none; 
-            padding: 10px; 
+            padding: 15px; 
             cursor: pointer; 
             text-transform: uppercase;
             font-weight: bold;
@@ -64,6 +64,7 @@
 </head>
 <body>
     <div class="container">
+        <!-- Slanted Header at 50% width -->
         <div class="header-slant">James Looney's Leatherworks</div>
         
         <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
