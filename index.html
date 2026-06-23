@@ -10,7 +10,13 @@
             --mint: #C8E6C9;
         }
         body { 
-            background-color: var(--mint); 
+            /* Graph paper effect */
+            background-color: #E5E5F7;
+            opacity: 0.8;
+            background-image: repeating-linear-gradient(to right, transparent 0, transparent 1.6666666666666667px, #E5E5F7 1.6666666666666667px, #E5E5F7 5px, transparent 5px, transparent 6.666666666666667px), repeating-linear-gradient(to bottom, transparent 0, transparent 1.6666666666666667px, #E5E5F7 1.6666666666666667px, #E5E5F7 5px, transparent 5px, transparent 6.666666666666667px), linear-gradient(to bottom, #444CF7 0.6px, transparent 0.6px), linear-gradient(to right, #444CF7 0.6px, transparent 0.6px);
+            background-size: 100% 100%, 100% 100%, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 0, 0 -0.2px, -0.2px 0;
+            
             font-family: sans-serif; 
             margin: 0;
             display: flex;
@@ -24,7 +30,7 @@
             gap: 15px; 
         }
 
-        /* Updated Header with Stripes */
+        /* Header with Stripes */
         .header-slant {
             background-color: var(--brown);
             color: white;
@@ -35,10 +41,9 @@
             clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
             margin-bottom: -10px;
             font-size: 0.9em;
-            position: relative; /* Required for the stripes */
+            position: relative;
         }
 
-        /* Adding the two vertical stripes toward the end */
         .header-slant::after {
             content: "";
             position: absolute;
@@ -47,7 +52,7 @@
             height: 50%;
             width: 2px;
             background: white;
-            box-shadow: 6px 0 0 white; /* Creates the second stripe */
+            box-shadow: 6px 0 0 white;
         }
 
         .box { 
