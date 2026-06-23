@@ -15,16 +15,16 @@
             margin: 0;
             display: flex;
             justify-content: center;
-            padding: 40px 20px; /* Increased vertical padding */
+            padding: 40px 20px;
         }
         .container { 
             width: 100%; 
-            max-width: 400px; /* Narrower width for elongated shape */
+            max-width: 400px; 
             display: grid; 
-            gap: 15px; /* Increased spacing for length */
+            gap: 15px; 
         }
 
-        /* Header set to 50% width */
+        /* Updated Header with Stripes */
         .header-slant {
             background-color: var(--brown);
             color: white;
@@ -35,17 +35,30 @@
             clip-path: polygon(0% 0%, 85% 0%, 100% 100%, 0% 100%);
             margin-bottom: -10px;
             font-size: 0.9em;
+            position: relative; /* Required for the stripes */
+        }
+
+        /* Adding the two vertical stripes toward the end */
+        .header-slant::after {
+            content: "";
+            position: absolute;
+            right: 25%;
+            top: 25%;
+            height: 50%;
+            width: 2px;
+            background: white;
+            box-shadow: 6px 0 0 white; /* Creates the second stripe */
         }
 
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
-            padding: 25px 20px; /* Increased padding for length */
+            padding: 25px 20px; 
             text-align: center;
         }
         
         .nav { font-weight: bold; font-size: 0.9em; }
-        .hero { display: flex; flex-direction: column; gap: 15px; text-align: center; } /* Stacked for length */
+        .hero { display: flex; flex-direction: column; gap: 15px; text-align: center; }
         .hero-img { width: 100px; height: 100px; background: #eee; border: 1px solid #ccc; margin: 0 auto; }
         .hero-text { font-size: 0.9em; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
@@ -64,7 +77,6 @@
 </head>
 <body>
     <div class="container">
-        <!-- Slanted Header at 50% width -->
         <div class="header-slant">James Looney's Leatherworks</div>
         
         <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
