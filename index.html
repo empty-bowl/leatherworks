@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Leatherworks</title>
+    <title>James Looney's Leatherworks</title>
     <style>
         :root { 
             --brown: #5D4037; 
@@ -23,23 +23,49 @@
             display: grid; 
             gap: 10px; 
         }
+
+        /* Slanted Header */
+        .header-slant {
+            background-color: var(--brown);
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            clip-path: polygon(0% 0%, 95% 0%, 100% 100%, 0% 100%);
+            margin-bottom: -5px;
+            font-size: 0.9em;
+        }
+
         .box { 
             border: 2px solid var(--brown); 
             background: white; 
             padding: 15px;
             text-align: center;
         }
-        .nav { font-weight: bold; }
+        
+        .nav { font-weight: bold; font-size: 0.9em; }
         .hero { display: flex; gap: 10px; text-align: left; }
         .hero-img { width: 30%; background: #eee; border: 1px solid #ccc; }
         .hero-text { width: 70%; }
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
-        button { background: var(--brown); color: white; border: none; padding: 10px; cursor: pointer; }
+        
+        button { 
+            background: var(--brown); 
+            color: white; 
+            border: none; 
+            padding: 10px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="header-slant">James Looney's Leatherworks</div>
+        
         <div class="box nav">OUR CRAFT | GALLERY | SHOP | CONTACT</div>
+        
         <div class="hero box">
             <div class="hero-img"></div>
             <div class="hero-text">
@@ -47,11 +73,13 @@
                 <p>HANDCRAFTED | VEG-TANNED</p>
             </div>
         </div>
+        
         <div class="grid-3">
             <div class="box">PROCESS</div>
             <div class="box">WALLET</div>
             <div class="box">BELT</div>
         </div>
+        
         <div class="box">
             <button>SHOP NOW</button>
         </div>
