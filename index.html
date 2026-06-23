@@ -10,10 +10,12 @@
             --mint: #C8E6C9;
         }
         body { 
-            /* Larger grid: Increased to 40px */
+            /* Grid lines using solid linear gradients for reliability */
             background-color: var(--mint);
-            background-image: radial-gradient(var(--brown) 0.5px, var(--mint) 0.5px);
-            background-size: 40px 40px; 
+            background-image: 
+                linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
             
             font-family: sans-serif; 
             margin: 0;
