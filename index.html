@@ -10,12 +10,7 @@
             --mint: #C8E6C9;
         }
         body { 
-            min-height: 100vh;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-            /* Updated background-size to fixed pixels to prevent stretching */
+            /* Removed min-height to allow content to dictate height */
             background-color: var(--mint);
             background-image: 
                 repeating-linear-gradient(to right, transparent 0, transparent 1.66px, var(--mint) 1.66px, var(--mint) 5px, transparent 5px, transparent 6.66px), 
@@ -23,15 +18,25 @@
                 linear-gradient(to bottom, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px), 
                 linear-gradient(to right, rgba(93, 64, 55, 0.3) 0.6px, transparent 0.6px);
             background-size: 20px 20px, 20px 20px, 20px 20px, 20px 20px;
-            background-position: 0 0;
             font-family: sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
         }
-        .container { width: 100%; max-width: 400px; display: grid; gap: 10px; } /* Reduced gap */
+        /* Container forces rigid sizing */
+        .container { 
+            width: 100%; 
+            max-width: 400px; 
+            display: flex; 
+            flex-direction: column; 
+            gap: 10px; 
+        }
 
         .header-slant {
             background-color: var(--brown);
             color: white;
-            padding: 10px 15px; /* Compacted padding */
+            padding: 10px 15px;
             font-weight: bold;
             text-transform: uppercase;
             width: 50%; 
@@ -53,11 +58,12 @@
         }
 
         .box { border: 2px solid var(--brown); background: white; padding: 15px; text-align: center; }
-        .nav { font-weight: bold; font-size: 0.85em; padding: 10px; }
+        .nav { font-weight: bold; font-size: 0.8em; padding: 10px; }
         .hero { display: flex; flex-direction: column; gap: 10px; padding: 15px; }
         .hero-img { width: 80px; height: 80px; background: #eee; border: 1px solid #ccc; margin: 0 auto; }
-        .hero-text h2 { margin: 5px 0; font-size: 1.2em; }
-        .hero-text p { font-size: 0.75em; margin: 0; }
+        .hero-text h2 { margin: 5px 0; font-size: 1.1em; }
+        .hero-text p { font-size: 0.7em; margin: 0; }
+        
         .grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
         
         button { 
